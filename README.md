@@ -82,8 +82,14 @@ npm run start
 **Solution**:
 
 - Queue-based synchronization system
-- Conflict resolution strategy
-- Automatic retry mechanism
+
+### 3. Backend Interaction
+
+**Challenge**: DummyJSON doesn't update server-side on CRUD operations
+**Solution**:
+
+- Force cache-first fetch policy with RTK Query
+- Allow refetch to get "latest" from DummyJSON
 
 ## Design Decisions
 
@@ -99,14 +105,9 @@ npm run start
    - Redux for global state
    - Local state for UI components
 
-3. **TypeScript Usage**
-   - Strong typing for better maintainability
-   - Interface-driven development
-   - Type safety across the application
-
 ## Future Improvements
 
-1. **Enhanced Offline Support**
+1. **Enhanced Sync Support**
 
    - Better conflict resolution
    - Batch synchronization
@@ -120,11 +121,9 @@ npm run start
 
 3. **Feature Additions**
 
-   - Multi-user support
-   - Data encryption
-   - Collaborative editing
-   - Push notifications
    - Unit test coverage
+   - User support
+   - Actual backend that supports CRUD
    - E2E testing with Detox
 
 4. **UI/UX Improvements**
